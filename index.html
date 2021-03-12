@@ -35,21 +35,29 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
    </head> 
 
 
-<script>
+<script> //this is where the confusion begins (calculating the results)
         var allergy_count = 0;
         var cold_count = 0;
+	var allergyPercent = 0;
+	var coldPercent = 0;
 
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-		alert(allergy_count);
 
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
         }
-
+	
+	function resultscalculator(){
+	var resultText = document.getElementById("results");
+	allergyPercent = allergy_count / 6 * 100;
+	coldPercent = cold_count / 6 * 100;
+	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"; //results output
+	
+	}
   </script>
 
 
@@ -157,16 +165,31 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <div class="page" id="six"> <!--page six start-->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 5</h1> <!--page six header-->
+		<h1>Question 6</h1> <!--page six header-->
 	</div>
 	
 	<div id="content" class="w3-container"> <!--start of page six content-->
 		<p>Have you experienced any body aches?</p> <!--page six question-->
 		
-		<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--yes button-->
-		<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--no button-->
+		<a href="#resultspage"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--yes button-->
+		<a href="#resultspage"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--no button-->
 	</div>
 </div> <!--end of page six-->
+	
+<div class="page" id="resultspage"> <!--start of results page-->
+	<div class="w3-container w3-flat-carrot"> <!--results page-->
+		<h1>Results</h1> <!--results page header-->
+
+	</div> <!--start of results page content-->
+	
+	<div id="content" class="w3-container"> <!--results page below-->
+		 <p id="results"></p> <!--results paragraph-->
+		
+		<a href = "#resultspage" onclick="resultscalculator();" class="w3-btn w3-black"> Results</a> <!--results button-->
+		
+	
+	</div>
+</div> <!--end of results page-->
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
