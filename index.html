@@ -90,53 +90,59 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<div class="page" id="one">
+<div class="page" id="one"> <!--start of page one-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 1</h1>
+		<h1>Question 1</h1> <!--page one header-->
 	</div>
 	
-    	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?</p> 
-		<a href="#two" class="w3-btn w3-black"> Yes </a> <!-- Still need to find a way to add variables to buttons -->
-		<a href="#two" class="w3-btn w3-black"> No </a>
+    	<div id="content" class="w3-container"> <!--start of page one content-->
+        	<p>Are your eyes watery or itchy?</p>  <!--page one question-->
+		
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!--yes button-->
+		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> No </a> <!--no button-->
     	</div>
-</div>
+</div> <!--end of page one-->
 
-<div class="page" id="two">
+<div class="page" id="two"> <!--start of page two-->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1>
+		<h1>Question 2</h1> <!--page two header-->
 	</div>
 	
-	<div id="content" class="w3-container">
-        <p>Do you have a fever?</p> 
-		<a href="#three" class="w3-btn w3-black"> Yes </a>
-		<a href="#three" class="w3-btn w3-black"> No </a>
+	<div id="content" class="w3-container"> <!--start of page two content-->
+        	<p>Do you have a fever?</p> <!--page two question-->
+		
+		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> <!--yes button-->
+		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> No </a> <!--no button-->
 	</div>
-</div>	
+</div>	<!--end of page two-->
 
-<div class="page" id="three">
+<div class="page" id="three"> <!--page three start-->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 3</h1>
+		<h1>Question 3</h1> <!--page three header-->
 	</div>
 	
-	<div id="content" class="w3-container">
-	<p>Do you have a sore throat?</p>
-		<a href="#four" class="w3-btn w3-black"> Yes </a>
-		<a href="#four" class="w3-btn w3-black"> No </a>
-	</div>
-</div>	
+	<div id="content" class="w3-container"> <!--start of page three content-->
 	
-<div class="page" id="four">
+		<p>Do you have a sore throat?</p> <!--page three question-->
+		
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> <!--yes button-->
+		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No </a> <!--no button-->
+	</div>
+</div> <!--end of page three-->	
+	
+<div class="page" id="four"> <!--page four start-->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 4</h1>
+		<h1>Question 4</h1> <!--page four header-->
 	</div>
 	
-	<div id="content" class="w3-container">
-	<p>Are your symptoms seasonal or chronic?</p>
-		<a href="#four" class="w3-btn w3-black"> Yes </a>
-		<a href="#four" class="w3-btn w3-black"> No </a>
+	<div id="content" class="w3-container"> <!--start of page four content-->
+	
+		<p>Are your symptoms seasonal or chronic?</p> <!--page three question-->
+		
+		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!--yes button-->
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> No </a> <!--no button-->
 	</div>
-</div>
+</div> <!--end of page three-->	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
